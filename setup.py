@@ -14,7 +14,7 @@ setup(
     url='https://github.com/testthedocs/sphinxcontrib-exampleblock',
     download_url='http://pypi.python.org/pypi/sphinxcontrib-exampleblock',
     license='BSD',
-    author='Serge Domkowski', 'Sven Strack'
+    author='Sven Strack',
     author_email='info@testthedocs.org',
     description='Sphinx "exampleblock" extension',
     long_description=long_desc,
