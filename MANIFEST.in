@@ -3,4 +3,4 @@ include LICENSE
 include CHANGES.*
 include tox.ini
 global-include *.js *.css
-exclude demo-docs
+prune demo-docs
