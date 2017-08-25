@@ -31,6 +31,27 @@ Source would look something like this::
 
             require 'my-api'
 
+*sphinxcontrib-exampleblock* makes use of pygments which are supported OOT with sphinx.
+
+That means all languages and lexers which are working with sphinx are working with *sphinxcontrib-exampleblock*
+
+If you want to use a example block which is not supported by that you can write you own lexer or use another one as *alias*.
+
+Let's say we want to use Debian and Fedora package management examples. Both are not yet supported with pygments.
+
+In your conf.py add the following code
+
+.. code-block:: python
+
+   from sphinx.highlighting import lexers
+   from pygments.lexers import BashLexer
+   lexers["debian", "dfn"] = BashLexer()
+
+
+Here we are telling sphinx to use the lexer for ``bash`` as alias for Debian and Fedora.
+
+The drawback is that you do not have color support for ``apt`` or ``dnf``.
+On the other site sphinx will be able to build without errors.
 
 Installation
 ------------
